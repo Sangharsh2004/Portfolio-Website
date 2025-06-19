@@ -1,0 +1,381 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2eeed;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #99badc, #99badc);
+    color: #fff;
+    text-align: center;
+    padding: 3rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+h1, h2 {
+    color: #131513; /* Consistent heading color */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #14c7be;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #ffffff;
+}
+
+/* About Section */
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #fdfdff;
+    background-color: #9e98b0;
+    padding: 1.5rem;
+    border-left: 5px solid #18be1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills, Projects, Contact Sections */
+#skills, #projects, #contact {
+    background-color: #bbabc9;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(234, 105, 105, 0.15);
+}
+
+.skills-container, .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skill-category, .project, .contact-form {
+    flex: 1 1 300px;
+    background-color: #1eb5b2;
+    padding: 1.5rem;
+    border-left: 5px solid #0db813;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(5, 224, 38, 0.1);
+    margin-bottom: 1rem;
+}
+
+.project a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #d1d6d8;
+}
+
+/* Form Styles */
+form label, form input, form textarea, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    border: 2px solid #25d125;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #f10f0f;
+}
+
+form button {
+    background-color: #337533;
+    color: #f37373;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #101210;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #288ece;
+    color: #fff;
+    margin-top: 2rem;
+    box-shadow: 0 -4px 10px rgba(211, 143, 15, 0.2);
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    color: #060706;
+    background-color: #e7ede7;
+    padding: 1rem 2rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    position: relative;
+}
+
+.social-links a::before {
+    content: attr(data-name);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2e94a8;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover::before {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    header {
+        padding: 2rem 0;
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 1.5rem;
+        margin: 1rem 0.5rem;
+    }
+
+    form label, form input, form textarea, form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
+
+/* Hero Section Styles */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('assets/hero-bg.jpg') center/cover no-repeat;
+    color: #e50909;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+.btn-secondary:hover {
+    background-color: #4CAF50;
+    color: #ce2828;
+}
+
+/* Additional Button and Image Styles */
+.download-btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+}
+
+
+p.tagline {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #b02c2c;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.image-overlay {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+}
+
+.image-overlay img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #b71c1c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.overlay-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.overlay-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Skills Container Styles */
+.skills-container {
+    display: flex;
+    flex-direction: left;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.skill {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #131513;
+}
+
+.skill-bar, .progress-bar {
+    height: 10px;
+    background: #7abd83;
+    width: 80%;
+    border-radius: 5px;
+}
